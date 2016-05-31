@@ -239,13 +239,13 @@ public class startApp extends CordovaPlugin {
 				params = args.getJSONObject(0);
 		
 		
-				if(params.has("package") || params.has("application")) {
+				if(params.has("application")) {
 					PackageManager pm = cordova.getActivity().getApplicationContext().getPackageManager();
 					
 					/**
 					 * get package info
 					 */
-					PackageInfo PackInfo = pm.getPackageInfo(params.getString("package"), PackageManager.GET_ACTIVITIES);
+					PackageInfo PackInfo = pm.getPackageInfo(params.getString("application"), PackageManager.GET_ACTIVITIES);
 						
 					/**
 					 * create json object
