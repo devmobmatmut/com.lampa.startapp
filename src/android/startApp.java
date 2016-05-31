@@ -260,7 +260,7 @@ public class startApp extends CordovaPlugin {
 					callback.success(info);
 				}
 				else {
-					callback.error("Value \"package\" in null!");
+					callback.error("Value \"package\" and \"application\" is null! At least application should have a value ");
 				}
 			}
 			else {
