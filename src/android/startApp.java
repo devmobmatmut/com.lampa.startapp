@@ -239,7 +239,7 @@ public class startApp extends CordovaPlugin {
 				params = args.getJSONObject(0);
 		
 		
-				if(params.has("package")) {
+				if(params.has("package") || params.has("application")) {
 					PackageManager pm = cordova.getActivity().getApplicationContext().getPackageManager();
 					
 					/**
